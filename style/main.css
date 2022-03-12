@@ -1,0 +1,133 @@
+/*cores a ser trabalhada e o reset do css*/
+:root{
+    --vermelho:#db0000;
+    --preto:#000000;
+    --pretocinza:#141414;
+    --cinza: #564d4d;
+    --branco:#ffffff;
+    --bordo:#831010;
+
+}
+/*fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crete+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Crete Round', serif;
+    
+}
+
+/*base principal da interface*/
+body{
+    background: var(--pretocinza);
+    color: var(--branco);
+}
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--preto);
+}
+header .logo{
+    margin-left: 10px;
+    color: var(--vermelho);
+    font-size: 40px;
+
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--cinza);
+    font-weight: bold;
+    margin-right: 10px;
+
+}
+header nav a:hover{
+    color: var(--branco);
+}
+
+/*filme principal*/
+
+.filme-principal{
+    font-size: 16px;
+    background:linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../img/house5.jpg');
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+.filme-principal .container{
+    width: 70%;
+}
+.filme-principal .titulo{
+    margin-top: 15%;
+    margin-left: 20px;
+    font-size: 40px;
+}
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: var(--branco);
+    padding: 15px 30px;
+    margin-right: 15px;
+    margin-left: 10px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 3s ease all;
+}
+.botao:hover{
+    background-color: var(--branco);
+    color: var(--preto);
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+}
+.box-filmes{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+/*resposabilidade*/
+@media screen and (max-width:700px){
+    header .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .filme-principal{
+        height: 50%;
+        background-size:contain;
+        background-repeat: no-repeat;
+        display: flex;
+    }
+    .botao{
+        margin-top: 5px;
+        width: 300px;
+        
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .descricao{
+        width: 50%;
+    }
+    
+}
